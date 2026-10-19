@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="calculator">
+      <div class="top-bar">
+        <h1>My Calculator</h1>
+        <button id="themeToggle" class="theme-btn" onclick="toggleTheme()">Switch to Dark</button>
+      </div>
+
+      <input type="text" id="display" value="0" readonly>
+
+      <div class="keys">
+        <button class="mem" onclick="memoryClear()">MC</button>
+        <button class="mem" onclick="memoryRecall()">MR</button>
+        <button class="mem" onclick="memoryAdd()">M+</button>
+        <button class="mem" onclick="memorySubtract()">M-</button>
+
+        <button class="fn" onclick="clearDisplay()">C</button>
+        <button class="fn" onclick="toggleSign()">+/-</button>
+        <button class="fn" onclick="percentage()">%</button>
+        <button class="op" onclick="addValue('/')">/</button>
+
+        <button class="fn" onclick="squareRoot()">&radic;</button>
+        <button class="fn" onclick="square()">x&sup2;</button>
+        <button class="fn" onclick="addValue('^')">x&#696;</button>
+        <button class="op" onclick="addValue('*')">*</button>
+
+        <button onclick="addValue('7')">7</button>
+        <button onclick="addValue('8')">8</button>
+        <button onclick="addValue('9')">9</button>
+        <button class="op" onclick="addValue('-')">-</button>
+
+        <button onclick="addValue('4')">4</button>
+        <button onclick="addValue('5')">5</button>
+        <button onclick="addValue('6')">6</button>
+        <button class="op" onclick="addValue('+')">+</button>
+
+        <button onclick="addValue('1')">1</button>
+        <button onclick="addValue('2')">2</button>
+        <button onclick="addValue('3')">3</button>
+        <button class="equals" onclick="calculate()">=</button>
+
+        <button onclick="addValue('0')">0</button>
+        <button onclick="addValue('.')">.</button>
+        <button onclick="backspace()">&larr;</button>
+      </div>
+    </div>
+
+    <aside class="history" id="historyPanel">
+      <div class="history-head">
+        <h2>History</h2>
+        <button class="clear-history" onclick="clearHistory()">Clear History</button>
+      </div>
+      <ul id="historyList"></ul>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
